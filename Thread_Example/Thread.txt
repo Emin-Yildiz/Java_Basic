@@ -1,0 +1,92 @@
+Java Thread:
+
+	Aynı anda birden fazla işlem yapmaya denir.
+
+	Thread işlemi yapabilmek için 2 yöntem vardır.
+		1.Thread class'ını extend edip run metodunu override etmek.
+		2. Runnable interface'ini implement edip run metodunu override etmek, sonra Thread class'ının constructor'ına nesne olarak göndermek.
+
+	Thread 'de çalıştırmak istdiğimiz kodları override ettiğimiz run metoduna yazarız.
+
+	th.start() = thread'i başlatır.
+
+	Java çoklu kalıtımı desteklemediği için Runnable kullanımı daha uygun olur.
+
+	Thread.sleep() = thread durdurmak içiin kullanılan fonksiyondur. Hata fırlattığı için try-catch içine kullanılmalıdır.
+
+	Thread durdurmak için thread.stop() metodu vardır ancak bu thread'in durmasını garanti etmez. Garanti altına alabilmek için Runnable veya Thread'den 	kalıttığımız class içinde bool bir değişken ile bunu garanti altına alabiliriz.
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+Java Thread Yönetimi:
+	
+	Birden fazla thread aynı anda tek bir kaynağı kullanmaya çalıştığında belirsiz durum ortaya çıkar.
+	
+	Bu durumun önüne geçebilmek için synchronized anahtar kelimesi kullanılabilir.
+
+		synchronized (Main.class){ // Thread yapılacak class'ı belirtiyoruz.
+            	for (int i = 0; i < 100; i++) {
+                		System.out.println(Thread.currentThread().getName());
+            	}
+        	}
+
+	Diğer bir yöntem ise thread'lere öncelik vermektir. Ancak öncelik vermek thread'lerin senkron çalışmasını garanti etmez.
+
+	Thread kullanırken senkron problemlerinden kaçabilmek için threadler arasında oldukça az nitelik paylaşmak önemlidir.Eğer niteliklerin paylaşılması 	gereliyorsa niteliği kullanmadan önce thread'in çalışığ çalışılmadığından emin olunması gerekir. isAlive() metodu ile thread'in çalışıp çalışmadığını 	kontrol edebiliriz.
+
+	Main thread, child thread'ler bitmeden biterse bu yanlış bir durumdur. join() metodu kullanarak child thread'ler bitmeden main metodun bitmesinin 	önüne geçebiliriz. join() metodu child metodlara bitince main metoda katılamsını söyler.
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+synchronized anahtar kelimesi kullanımı:
+
+	critical sections(kritik bölge), durumlarında mesela 2 tane thread aynı anda bellekte bulunan bir değişkeni değiştirmeye çalışırsa sync hatası ile 	karşılaşırız. synchronized anahtar kelimesi bu sync problemini çözer. Bu anahtar kelime bir metoda, değişkene veya bir blok parçasına verilebilir.
+
+	synchronized anahtar kelimesi ile işaretlenmiş bir metod Thread tarafından kullanıldığında, threadin metodla işi bitene kadar başka hiçbir thread o 	metoda erişemez. Metod lock mekanizması ile erişime kapanır.
+
+		erisim_belirtesi synchronized geri_dönüş_türü fonskiyon_adı(){ // yapılacak işlemler }
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+volatile anahtar kelimesi: 
+		
+	Birçok thread tarafından ortak kullanılan bir değişken olduğunu varsayalım bu değişken volatile ile işaretlenir ise bu değişkenin tüm threadler 	tarafından sync olarak çalışacağının garantisini verir.
+	
+	Erişim_Belirteci volatile Veri_Tipi Değişken_Adı;
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+ThreadPool:
+	
+	Thread kullanmak malliyetli olduğu için threadpool kullanılarak belirli bir sayıda thread üretilip, thread ihtiyacı olduğunda bu havuzda bulunan 	threa'leri kullanır.
+
+	ExecutorService executor = Executors.newFixedThreadPool(15); 
+	
+	Yukarıda havuzda 15 tane thread oluşturulmuştur. Bu nesne bize ExecutorService türünde bir nesne döndürür. Bu nesne havuzda oluşturulan threadleri 	kontrol etmemize olanak verir.
+	
+	Havuzdan thread kullanabilmek için runnable yada thread class'ını miras almış bir class'ın nesnenine ihtiyacımız var.
+	
+	ThreatEx ex qmatic = new ThreadEx();	
+	executor.execute(ex)
+
+	execute(), metodu ile havuzda bulunan thread'lerden kullanmış oluyoruz.
+------------------------------------------------------------------------------------------------------------------------------------------------------------Thread'ler arası iletişim:
+		
+	Threadler kendileri arasında notify(), notifyAll() ve wait() metodlarıyla haberleşebilirler. Bu metodlar object sınıfından gelir ve synchronized ile 	beraber kullanılamsı gerekir.
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+Thread Durumları:
+	
+	Threadler new ile oluşturulduğu andan itibaren state bilgisine sahip olurlar. Bu state bilgileri threade'in durumuna göre değişmektedir.
+
+	NEW: ilk oluşturulduğunda bu duruma sahip olur.
+	RUNNABLE: start() ile thread başlattığımızda bu duruma geçer.
+	BLOCKED: thread input beklerken yada diğer threadleri beklerken bu duruma geçer.
+	WAITING: thread başka bir thread tarafından aksiyon bekliyorsa ve wait(), join() metodu çağırdığı zaman bu durum gerçekleşir.
+	TIMED_WAITING: join(), wait(), sleep()  metodlarının timeout bilgisi ile çağırılması sonucu threadin sahip olduğu durumdur.
+	TERMINATED: thread'in herhangi bir şekilde son bulması durumu.
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
