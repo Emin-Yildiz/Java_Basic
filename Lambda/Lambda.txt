@@ -1,0 +1,8 @@
+Lamda:
+	Kısa kod bloklarıdır. Metodların kısaltılmış hali gibi düşünülebilir.
+
+	if, for gibi değişkenler, atamalar ve ifadeler içermezler.
+
+	Lambda ifadesini bir değişkende depolayabilmek için java içinde bulunan consumer interface'ini kullanabiliriz.
+
+	(parameter1, parameter2) -> expression
