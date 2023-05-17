@@ -1,0 +1,15 @@
+Enum:
+	Sabit değerler kümesine sahip bir türdür.
+	Tanımlanan enum türünde nesneler oluşturulabilir.
+	
+	ordinal() = kullanılan ifadenin enum'da kaçıncı sırada olduğunu verir.
+	compareTo() = karşılaştırma yapmak için kullanılır. (enum.x.compareTo(enum.y)) -> (ordinal(x) - ordinal(y))
+	name() = enum sabitinin tanımlı adını string biçiminde döndürür.
+	values() = tüm enum sabitlerini içeren bir dize döndürür.
+
+Enum Constructor:
+	Parametre olarak string bir değer alır. Bu string ifade enum içinde final ile oluşturulan niteliğe aktarılır.
+	Constructor private tanımlı olduğu için dışardan erişilemez ve bir enum içindeki nitelik kullanılarak ulaşılır.
+
+Enum String:
+	Enum String .toString() ve name() metodu ile elde edilebilir.s

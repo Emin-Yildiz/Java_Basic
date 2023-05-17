@@ -1,0 +1,20 @@
+Inner classlar:
+	iç içe classlar anlamına gelir. Class içinde class yapısı vardır.
+	this anahtar kelimesi ile outer class'a erişmek mümkündür.
+	Ayrıca inner class'larda içteki class ile outer class'da bulunan private bir metoda erişebiliriz.
+
+Static Nested Class:
+	dışdaki class'a erişmek mümkün değildir. static olmayan nested class'larda this ile erişebiliyorken static class'larda erişemeyiz.
+	Java sadece iç içe geçmiş class'ların static olmasına izin verir.
+	static class'lara erişmek için nesne oluşturmamıza gerek yoktur.
+	static class'lardan static olmayan metodlara erişemeyiz.
+	Normal class'lar static tanımlanamaz.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+Anonymous Class:
+	Adı olmayan iç içe geçmiş class'lardır. Interface kullanarakta yapılabilir. (Örnekleri projelerde.)
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+	
+
+	

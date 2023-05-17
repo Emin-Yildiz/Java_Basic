@@ -1,0 +1,12 @@
+abstract:
+	
+	"a, b'dir" (is a) gibi ifadelerde kullanılır. Mesela "honda arabadır", "Köpek bir hayvandır." gibi.
+	static olmayan bir metod'a sahip olmak istiyorsak kullanırız. (değişken değerler, metodlar fln)
+
+	Soyutlama, gereksiz ayrıntıları gizlememizi ve yalnızca gerekli bilgileri göstermemizi sağlayan önemli bir nesne yönelimli programlama 	kavramıdır. Bu, daha basit, daha üst düzey bir fikirle ayrıntıları atlayarak veya gizleyerek karmaşıklığı yönetmemizi sağlar.
+
+	Abstract class'lardan nesne oluşturamayız. ve abstrack class içinde hem normal metod hemde abstract metod yazılabilir. (Abstract metodların 	gövdesi olmaz.)
+
+	Abstract class'ların constructor metodları olabilir ve yine aynı şekilde super anahtar kelimesi ile yapıcı metodlara erişebilir.
+
+	Abstract class'ı miras alan bir subclass bütün metodları override etmelidir. Eğer subclass'da bir abstract class ise override etmesine gerek 	yoktur.

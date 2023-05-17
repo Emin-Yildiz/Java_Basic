@@ -1,0 +1,52 @@
+inheritance = kalıtım, miras alma,	subclass = miras alan, superclass = miras alınan,	is-a ilişkiis vardır.
+
+override = geçersiz kılma, subclass metod, superclass metodu geçersiz kılar.
+
+super anahtar kelimesi = subclass'dan superclass'a erişmek için kullanılır. super.eat() //superclass'da ki eat metoduna eriştik burada.
+
+1. Single Inheritance:
+	Bir subclass, bir superclass olma durumu
+
+2. Multilevel Inheritance
+	Miras alan bir subclass'ın, başka bir class tarafından superclass durumuna gelmesi.
+
+3. Hierarchical Inheritance
+	Bir superclass, birden çok subclass'a miras olur.
+
+4. Multiple Inheritance
+	Subclass, birden çok superclass'dan miras alır.
+
+5. Hybrid Inheritance
+	2 veya daha çok kalıtım türünün birleşimi.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Bir metodun override olabilmesi için aynı ad, parametre ve dönüş tipine sahip olmalı. Final ve static metodlar override edilemez. Bazı abstract metodlar override edilemez.
+
+Javada constructor metodlar override edilemez.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+super anahtar kelimesi, superclass'ın metodlarına değişkenlerine, constructor'larına, override olmuş metodlarına erişmek için kullanılır.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Polymorphism kısacası temel bir class'ın birden çok class'da farklı yöntemler için kullanılmasıdır. oluşturma temel işleminin kare için farklı küre için farklı olması örnek verilebilir. print() yöntemi bir polymorphism örneğidir. 
+
+Override ve overload işlemleri bir polymorphism örneğidir. operator overload işlemide polymorphism örneğidir.'+' operatörü hem int toplama hemde string toplama olarak geçmesi örnek verilebilir.
+
+Polymorphic Variables: Bir değişken, farklı koşullar altında farklı değerlere atıfta bulunuyorsa polimorfik olarak adlandırılır.
+
+	ProgrammingLanguage pl;
+	pl = new ProgrammingLanguage();
+	pl = new Java();
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Encapsulation: alanlar ve metodların bir arada durmasına denir. Benzer kodları bir arada tutma bir nevi.
+
+Data Hiding: Class içindeki metodların diğer class'lardan gizlenmesi private tanımlanması gibi gibi.
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,13 @@
+Java Reflection:
+	çalışma zamanında sınıfları, arabirimleri, kurucuları, yöntemleri ve alanları incelememize ve değiştirmemize olanak tanır.
+	Genellikle oluşturulan nesnenin bilgilerine ulaşmak için kullanılabilir.
+	Class sınıfı kullanılarak reflection işlemi yapılır. 
+
+	Dog d1 = new Dog();
+      Class obj = d1.getClass();
+
+	Yukarıda dog classından bir nesne üretilip bu nesne class türündeki obj nesnesine aktarılmıştır. Bu sayese reflection işlemi gerçekleştirilebilir.
+	
+	obj.getName() = class'ın adını döndürür.
+	obj.getModifier() = class'ın erişim belirleyicisini döndürür.
+	obj.getSuperClass() = class'ın hangi class'tan miras aldığını döndürür. (metod, field, constructor örnekleri kodda.)

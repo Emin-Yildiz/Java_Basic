@@ -1,0 +1,7 @@
+Singleton Tasarım Deseni:
+	Dışarıdan nesne oluşumunu engellemek, sadece 1 nesne oluşturup gerekli işlemleri bu nesne üzerinden gerçekleştirme amaçlanmaktadır. 
+	
+	Her sınıftan yalnızca bir tane obje oluşturulmalı. Bunun için 3 şart gerekiyor.
+		1. Constructor metodun private tanımlı olmalı bu sayede dışarıdan nesne oluşturulamaz.
+		2. Tek nesneye atıfta bulunan, sınıf türünce bir nitelik oluşturulmalı,
+		3. Nesne oluşturmamıza ve o nesneye erişmemize imkan vericek static bir metod oluşturulmalı.

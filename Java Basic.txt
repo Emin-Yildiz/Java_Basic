@@ -1,0 +1,67 @@
+jvm , jre ile birlikte gelir, jre ise jdk ile birlikte gelir. Jre yanında class lib'ler ile birlikte gelir. 
+jdk ise yanında debugger, compiler gibi araçlar ile gelir.
+
+
+int değişkenlerde başında 0b varsa binary, 0x varsa hexadecimal, 0 varsa oktal'dır.
+
+e2 = *10^2
+
+byte = 2^8 , short = 2^16, int 2^32, long 2^64 pozitif taraftan bir çıkıyor.
+
+float = 2^32, double 2^64
+
+char = 16 bit, unicode karakter min = \u0000, min = \uffff, string java.String class'ı tarafından destekleniyor.
+
+++var1 = önce artırır sonra yazdırır (prefix), var1++ = önce yazdırır sonra arttırır (postfix)
+
+instanceof = bir nesnenin o class'dan mı diye kontrol eder mesela "str instanceof String" gibi
+
+for-each döngüsü bir dizi ile kullanılıyor.
+
+for (char item: vowels) {	// vowels dizisi char türünde
+     System.out.println(item);
+}
+
+javada düz break sadece döngüden çıkar. bununla birlikte labeled break statement kavramı ile break etiketlendiği yere kadar gider.
+Bir bloğu "label:" ile etiketlediğimizi varsayalım. "break label;" ile label'ın olduğu bloğa kadar çıkarız.
+
+Aynısı continue içinde geçerli, ancak continue döngüden çıkmaz, döngüye devam eder.
+
+Multidimensional array = martisler, çift boyutlu diziler.
+
+int[][] a = new int[3][4]; // 3 = row sayısı, 4 = column sayısı
+
+3 boyutlu diziler, 2 boyutlu dizilerden oluşan bir dizidir.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Dependency Injection:
+
+	bir nesne'nin düzgün çalışabilmesi için başka bir nesneye bağımlı olabilir. Bu bağımlılığı azaltmak için nesne içerisinde tanımlı bir değişkene 	bağımlı olunan nesne enjekte edilir ve bu sayede bağımlılık azaltılır.
+
+	3 farklı DI yöntemi vardır. constructor injection, setter injection, method injection.
+
+	Constuctor Injection : Direkt olarak constructor metod içerisinde injection yapar.
+
+	Setter Injection : Set metodu kullanarak yapılan Injection işlemine denir.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+MVC (Model View Controller)
+
+	Model : Projenin iş mantığının oluştuğu bölümdür. Doğrulama ve veri erişim işlemleride bu katmanda yapılır.
+	Controller : View ile model arasındaki veri alış verisini kontrol eden katman
+	View : Kullanıcıların gördüğü html kodlarının bulunduğu katman ayrıca, arayüzden aldığı verileri yada istekleri controller katmanına iletir.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Validation: 
+	
+	login işlemleri, e-mail doğrulama işlemleri gibi doğrulama gerektiren işlemlerde kullanılır.
+	
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+@Autowired:
+
+	Class'larda kullanılan bağımlılığı belirtmek için kullanılır. Mesela Controller class'ında kullanılan service değişkeni, Service class'ına 	bağımlılığı temsil etmektedir.
+
+
+

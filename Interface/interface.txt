@@ -1,0 +1,14 @@
+interface:
+	
+	a bunu yapabilir ifadesi olduğu zaman interface kullanılır. "Gönderen bir dosya gönderebilir, çizebilir, bir şekli çizebilme yeteneğine sahiptir" gibi.
+	Aynı zamanda sorun birden çok miras alma ile çözülüyor ise interface kullanılabilir.
+
+	interface'lerde static metod bulunmaz ve constructor metodları yoktur.
+
+	interface'ler, abstract gibi class oluşturamaz. class'lar birden çok interface implement edebilir.
+
+	interface'ler diğer interface'ler tarafından extend anahtar kelimesi ile miras alınabilir. birden fazla interface miras alınabilir.
+
+	Bir class, birden çok interface'i kalıtarak çoklu kalıtım özelliğine sahip olur.
+
+	interface içine default anahtar kelimesi kullanarak body özelliğine sahip metodlar yazabiliriz. Bu default metodları hem override edebiliri hemde gövdeye 	sahip oldukları için hiçbir değişiklik yapmadan direkt olarak kullanabiliriz.

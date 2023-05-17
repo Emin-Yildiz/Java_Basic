@@ -1,0 +1,53 @@
+Nesne yönelimli yaklaşımın temel kavramı, karmaşık sorunları daha küçük nesnelere ayırmaktır.
+
+Nesnelerin davranış ve durumu vardır. durum = rölatide, durmuş fln gibi, davranış = hızlanıyor, yavaşlıyor gibi.
+
+Field'lar ve Metodlar nesnenin davranışı ve durumunu belirler. field = varlığın niteliklerini temsil eder. methodlar davranışlarını.
+
+Nesne sınıfın örneğidir. new ve constructor ile nesne oluştururuz.
+
+******  bir nesnenin oluşturulması sırasında ilk çalışan metotlardır
+
+Aynı sınıf içinde de nesne oluşturulabilir.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+static anahtar kelimeli metodlara nesne oluşturmadan erişilebilir. metodların avantajı yeniden kullanılabilir olmalarıdır.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3 farklı constructor var
+	1. parametresi olmayan
+	2. parametresi olan
+	3. Default constructor		constructor'lar overload edilebilir ancak override edilemez.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Stringlerde '\' karakteri, String example = "This is the \"String\" class."; örnekteki kullanımı ile çift tırnaklardan kaçınmasını söyler.
+
+Stringler değişmezdir (immutable). 
+
+** Java eğer bellekte bulunan string havuzunda oluşturmak istediğimiz string var ise bu string havuzdan tahsis edilir, yeniden oluşturulmaz. Ancak new ile bir string oluşturduğumuz zaman bellekten tahsis edilmez havuza yeni bir string oluşturulur.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+default = sadece içinde bulunduğu paket içerisinde görünür.
+
+private = dışarıdan bir class tarafından erişilemez sadece get, set ile erişilebilir.
+
+public =  her yerden erişilebilir.
+
+protected = sadece kendi sınıfı ve subclass'lar tarafından erişilebilir.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+this = geçerli nesneye referansdır.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+final metodlar override edilmez, class'lar ise kalıtılamaz
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+recursive fonksiyonlar stack yapısını kullanır.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+"boolean result1 = name instanceof String;" , "boolean result2 = obj instanceof Main;" instanceof metodu nesnenin verilen class'a mı ait olduğunu bool olarak döndürür.
+
+instanceof ile aynı zamanda subclass sınıflar'da true verir.( "d1 instanceof Dog", "d1 instanceof Animal") bu iki ifade de true döndürür.
+
+d1 instanceof Object, javada tüm nesneler object nesnesinden türediği için bu ifade her zaman doğru olacaktır.
+
+
+
+
+
+
