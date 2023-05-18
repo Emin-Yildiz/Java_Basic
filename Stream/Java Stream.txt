@@ -1,0 +1,22 @@
+Stream API:
+	Liste, dizi işlemek için işlevsel işlemler sağlar. Listeler ve dizilerde çok daha kolay ve temiz kod yazma imkanı sunar.
+	Bir interface olduğundan dolayı direkt olarak nesne almaz. stream() ve parallelStream() metodlarıyla geriye stream nesnesi döndürür.
+
+	int -> intStream,		double -> doubleStream, 	long -> longStream
+
+	stream() = tek thread kullanır işlemler tek tek gerçekleştirilir.
+	parallelStream() = multi thread kullanır, aynı anda birden çok işlemi gerçekleştirebilir.
+
+	filter() => filtre işlemlerini yapmamızı sağlar.
+		startsWith(""); => ilk harfa göre filtremeleme işlemi
+		constains(""); string içinde verilen parametre var ise o elemanı döndürür.
+
+	sorted() => sıralama işlemi yapar. String ifade ise alfabatik sıraya göre, sayı ise küçükten büyüğe
+
+	reduce() => yapılan işlemi teker teker basamak basamak yazar.
+		reduce ilk parametre olarak int türünde bir identity(kimlik) parametresi alır. Bu parametre diğer reduce ifadelerinin her birinde farklı olmalı
+		aynı olursa sonradan olan reduce ifadesi çalışmıyor.
+
+	map() => stream içerisinde ki elemanların tiplerini değiştirmek veya üzerlerinde işlem yapmak için kullanılır.
+
+	distinct() => Listedeki aynı değerleri tek bir değere indirger.
