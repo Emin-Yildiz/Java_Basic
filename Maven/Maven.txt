@@ -1,0 +1,52 @@
+Maven:
+	Otomasyon ve inşa aracıdır. Her kütüphane için gerekli olan JAR dosyalarını indirmek ve projeye uygun olarak yerleştirmek gerekir. Ayrıca her yeni 	güncelleme sonrası güncel dosyaların takip edilmesi gerekecektir.
+
+	Maven proje dosyasına eklenen bağımlılıklar ile kolay bir şekilde indirmeyi ve proje yerleştirmeyi sağlar.Kullanılan kütüphaneler proje dosyasında yer 	aldığından taşınabilirlik sağlanmış olur.
+
+	pom.xml  =>  maven ayar dosyası. 3 kısımdan oluşur. Project Meta Data, Dependencies, Plugins
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+mvn clean  =>  Derlenmiş dosyaları temizlemek için kullanılır.
+
+mvn test  =>  Birim testlerini çalıştırmak için kullanılır.
+
+mvn compile  =>  Projeyi derlemek için kullanılır.
+
+mvn package  =>  Projeyi paketlemek(jar, war) için kullanılır.
+
+mvn validate  =>  Projenin doğruluğunu kontrol eder.
+
+mvn install  =>  Paketi yerel bir depoya kurar.
+
+mvn deploy  =>  Paketi uzak bir depoya yükler.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+Maven archetype:
+	Hızlı bir şekilde proje iskeleti oluşturmak için kullanılan bir araçtır.
+
+	groupId  =>  Projenin olduğu grup adı
+	artifactId  =>  Proejenin adı
+
+	Archetype ile java projesi oluşturma:
+		mvn archetype:generate -DgroupId=com.javaproject -DartifactId=JavaProject -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
+	Archetype ile java web projesi oluşturma:
+		mvn archetype:generate -DgroupId=com.javaproject -DartifactId=JavaWebProject -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false
+
+	Harici JAR dosyalarını kullanmak:
+		
+		<dependency>
+			<groupId>com.yusufsezer</groupId>
+			<artifactId>ozeljar</artifactId>
+			<scope>system</scope>
+			<version>1.0</version>
+			<systemPath>src\lib\ozeljar.jar</systemPath>
+		</dependency>
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Maven LifeCycle:
+	Maven Build Lifecycle, Maven projesinin derlenme, test edilme, paketlenme ve dağıtım gibi aşamalarını otomatikleştiren ve yöneten bir sistemdir. 3 ana 	bölümden oluşur.
+
+	1.Clean Lifecycle: Bu lifecycle, projede bir temizlik işlemi gerçekleştirir. Bu aşamada, önceki bir yapılandırma işleminin temizlenmesi için hedefler 	bulunur. Örneğin, ‘clean’ hedefi kullanarak, önceki derleme çıktılarını silmek mümkündür.
+
+	2.Default Lifecycle: Bu lifecycle, projenin temel derleme işlemini gerçekleştirir. Bu aşamada, proje kaynak kodu derlenir, testler çalıştırılır ve proje 	paketlenir. Default lifecycle, üç fazdan oluşur: compile, test ve package. Bu aşamalarda, ayrıca projenin hedef platformuna göre farklı türde paketlerin 	oluşturulması da sağlanır.
+
+	3.Site Lifecycle: Bu lifecycle, proje hakkında belgelerin oluşturulması için kullanılır. Bu aşamada, proje dokümantasyonu oluşturulur ve proje hakkında 	ayrıntılı bilgi sunulur.
